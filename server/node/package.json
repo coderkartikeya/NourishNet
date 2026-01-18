@@ -1,0 +1,12 @@
+{
+  "name": "nourishnet",
+  "version": "1.0.0",
+  "description": "Creating web app to serve the needy",
+  "license": "ISC",
+  "author": "Kartikeya Vats",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
