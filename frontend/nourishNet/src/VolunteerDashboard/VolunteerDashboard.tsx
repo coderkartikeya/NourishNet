@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Bell, MapPin, User, Clock, BarChart2, Menu, LogOut, CheckCircle, Navigation } from 'lucide-react';
-import MapComponent from './components/MapComponent';
+import MapComponent from '../components/MapComponent';
 import { Link } from 'react-router-dom';
 
 const VolunteerDashboard: React.FC = () => {
