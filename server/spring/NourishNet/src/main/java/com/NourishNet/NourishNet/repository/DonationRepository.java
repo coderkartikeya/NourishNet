@@ -1,20 +1,22 @@
-package repository;
+package com.NourishNet.NourishNet.repository;
 
-import entity.Donation;
-import entity.User;
+import com.NourishNet.NourishNet.entity.User;
+import com.NourishNet.NourishNet.entity.Donation;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
+import java.util.Optional;
+
 @Repository
 public interface DonationRepository extends JpaRepository<Donation,Long> {
     /*
     @parms Donar or resturant Id
     Function : To find the All the Donations of the particular resturant/ donar
      */
-    List<Donation> findByDonarId(Long Id);
+    Optional<Donation> findById(Long Id);
 
     /*
     @params : Status (Pending or Delivered )

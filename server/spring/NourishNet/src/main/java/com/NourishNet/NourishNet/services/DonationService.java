@@ -1,7 +1,15 @@
-package services;
+package com.NourishNet.NourishNet.services;
 
-import org.springframework.stereotype.Service;
+import com.NourishNet.NourishNet.dto.donation.DonationRequestDto;
+import com.NourishNet.NourishNet.dto.donation.DonationResponseDto;
 
-@Service
+import java.util.List;
+
 public interface DonationService {
+
+    DonationResponseDto createDonation(DonationRequestDto donationRequestDto);
+
+    DonationResponseDto getDonationById(Long id);
+
+    List<DonationResponseDto> getAllDonations();
 }

@@ -1,25 +1,19 @@
-package services;
-import entity.User;
-import org.springframework.stereotype.Service;
-import repository.UserRepository;
+package com.NourishNet.NourishNet.services;
 
-@Service
+import com.NourishNet.NourishNet.dto.user.UserRequestDto;
+import com.NourishNet.NourishNet.dto.user.UserResponseDto;
+
 public interface UserService {
 
+    UserResponseDto registerUser(UserRequestDto userRequestDto);
 
+    UserResponseDto findByEmail(String email);
 
-    public User registerUser(User user);
+    UserResponseDto updateUserLocation(Long userId, Double lat, Double lng);
 
-    public User findByEmail(String email);
-
-    public User updateUserLocation(Long userId,Double lat,Double lng );
-
-    public User getUserProfileById(Long userId);
+    UserResponseDto getUserProfileById(Long userId);
 
     /*
     Optional : Get user success rate
      */
-
-
-
 }

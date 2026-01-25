@@ -1,12 +1,14 @@
-package entity;
+package com.NourishNet.NourishNet.entity;
 
 import jakarta.persistence.*;
-import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 import org.locationtech.jts.geom.Point;
 
+@Setter
+@Getter
 @Entity
 @Table(name = "users")
-@Data
 public class User {
 
     @Id
@@ -25,4 +27,5 @@ public class User {
 
     @Column(columnDefinition = "geometry(Point, 4326)")
     private Point location;
+
 }
