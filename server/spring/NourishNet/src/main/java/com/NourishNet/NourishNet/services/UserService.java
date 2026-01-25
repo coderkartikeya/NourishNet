@@ -5,7 +5,7 @@ import com.NourishNet.NourishNet.dto.user.UserResponseDto;
 
 public interface UserService {
 
-    UserResponseDto registerUser(UserRequestDto userRequestDto);
+    UserResponseDto registerUser(UserRequestDto userRequestDto) throws Exception;
 
     UserResponseDto findByEmail(String email);
 

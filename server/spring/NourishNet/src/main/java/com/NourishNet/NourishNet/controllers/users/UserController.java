@@ -20,7 +20,7 @@ public class UserController {
     }
 
     @PostMapping("/register")
-    public ResponseEntity<ApiResponse<UserResponseDto>> registerUser(@RequestBody UserRequestDto userRequestDto) {
+    public ResponseEntity<ApiResponse<UserResponseDto>> registerUser(@RequestBody UserRequestDto userRequestDto) throws Exception {
         UserResponseDto createdUser = userService.registerUser(userRequestDto);
         return ResponseEntity.ok(ApiResponse.success(createdUser, "User registered successfully"));
     }

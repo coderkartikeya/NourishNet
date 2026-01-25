@@ -18,9 +18,11 @@ import java.util.stream.Collectors;
 public class DonationServiceImpl implements DonationService {
 
 
-    private final  DonationRepository donationRepository;
-    public DonationServiceImpl(DonationRepository donationRepository){
-        this.donationRepository=donationRepository;
+    private final DonationRepository donationRepository;
+
+    @Autowired
+    public DonationServiceImpl(DonationRepository donationRepository) {
+        this.donationRepository = donationRepository;
     }
 
     private final GeometryFactory geometryFactory = new GeometryFactory();
@@ -33,7 +35,7 @@ public class DonationServiceImpl implements DonationService {
         donation.setStatus("PENDING"); // Default status
 
         if (donationRequestDto.getLatitude() != null && donationRequestDto.getLongitude() != null) {
-            Point point = geometryFactory.createPoint(new Coordinate(donationRequestDto.getLongitude(), donationRequestDto.getLatitude()));
+            org.locationtech.jts.geom.Point point = geometryFactory.createPoint(new Coordinate(donationRequestDto.getLongitude(), donationRequestDto.getLatitude()));
             donation.setLocation(point);
         }
 
